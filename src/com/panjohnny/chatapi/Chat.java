@@ -64,13 +64,13 @@ public class Chat {
 		history.add(message);
 		if(message.isSystemMessage()) {
 			server.getConnectedClients().forEach(c -> {
-				if(c.SAFE_CONNECTION) {
+				if(c.SAFE_CONNECTION && c!= notTo) {
 					c.sendPacket(new ChatMessagePacket(message.getSender().getName(), message.asString()));
 				}
 			});
 		} else {
 			server.getConnectedClients().forEach(c -> {
-				if(c.SAFE_CONNECTION) {
+				if(c.SAFE_CONNECTION && c!=notTo) {
 					c.sendPacket(new ChatMessagePacket("", message.asString()));
 				}
 			});
