@@ -1,6 +1,6 @@
 # JavaChatAPI
 The easy chat api written in java
-
+# Warning found error in latest build please add this on unwatch gonna update it
 ## Pre release may contain bugs!
 Please return them thro issue tracker here on github also create pull request and give me feedback thanks 😊
 
